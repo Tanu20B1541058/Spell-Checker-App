@@ -1,6 +1,5 @@
 import re
 import pandas as pd
-from tqdm import tqdm
 
 def split(word):  
     parts = []
@@ -78,5 +77,5 @@ vocab = list(set(words))
 # 2. Finding the Probability Distribution
 word_probability = {}
 
-for word in tqdm(vocab):
+for word in vocab:
     word_probability[word] = float(words.count(word) / len(words))
